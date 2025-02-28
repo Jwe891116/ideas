@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+body,
+section,
+header,
+div,
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+#header-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure video is behind the content */
+}
+
+#topbar {
+  height: 250px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  position: fixed;
+  right: 70px;
+  margin-top: 60px;
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+.nav-logo {
+  margin-top: 10px;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.nav-logo a {
+  font-size: 35px;
+  padding-left: 100px;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav {
+  background: url(./logo/Belize_Coast_Guard_logo.png);
+  background-size: 120px;
+  background-repeat: no-repeat;
+  font-size: 36px;
+}
+
+nav a {
+  color: #b59410;
+  text-decoration: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links ul li a:hover {
+  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
+    0 0 80px #b59410; /* Enhanced glow on hover */
+}
+
+.moto {
+  font-style: italic;
+  font-size: 20px;
+  width: 210px;
+  margin-left: 165px;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.moto1 {
+  font-style: italic;
+  font-size: 20px;
+  width: 250px;
+  margin-left: 152px;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 50px;
+}
+
+/* a:link {
+  color: #b59410;
+}
+
+a:visited {
+  color: red;
+} */
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with spacing */
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* .cmdtContainer {
+  background-image: url(./images/bcg-commandant-bennett-office.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 400px;
+  background-color: red;
+} */
+
+.cmdtContainer {
+  background-image: url(./images/bcg-commandant-bennett-office.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 5%;
+  width: 100%;
+  height: 400px;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space out the columns */
+  align-items: center; /* Vertically center the content */
+}
+
+.cmdt {
+  flex: 1; /* 3 cards per row with spacing */
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  margin-left: 52%;
+  height: 400px;
+}
+
+.cmdt {
+  font-size: 20px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+
+  .moto,
+  .moto1 {
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo a {
+    font-size: 20px;
+  }
+
+  .nav-links ul li a {
+    font-size: 16px;
+  }
+
+  .moto,
+  .moto1 {
+    font-size: 16px;
+  }
+
+  .cmdtContainer {
+    padding: 20px 10px;
+  }
+
+  .cmdt h1 {
+    font-size: 24px;
+  }
+
+  .cmdt h2 {
+    font-size: 20px;
+  }
+
+  .cmdt p {
+    font-size: 14px;
+  }
+}
