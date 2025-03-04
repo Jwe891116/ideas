@@ -20,7 +20,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
   color: #333;
 }
 
@@ -188,24 +188,20 @@ a:visited {
   background-image: url(./images/bcg-commandant-bennett-office.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 5%;
+  background-position: 15%;
   width: 100%;
-  height: 400px;
-  display: flex; /* Use Flexbox for layout */
-  justify-content: space-between; /* Space out the columns */
-  align-items: center; /* Vertically center the content */
+  height: 300px;
 }
 
 .cmdt {
-  flex: 1; /* 3 cards per row with spacing */
+  flex: 1;
   margin: 10px;
   box-sizing: border-box;
-  background-color: #f9f9f9;
+  background-color: white;
   padding: 20px;
-  border: 1px solid #ddd;
   text-align: center;
-  margin-left: 52%;
-  height: 400px;
+  margin-left: 50%;
+  height: 300px;
 }
 
 .cmdt {
