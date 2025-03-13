@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+}
+body,
+section,
+header,
+div,
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+#header-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure video is behind the content */
+}
+
+#topbar {
+  height: 250px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  position: fixed;
+  right: 70px;
+  margin-top: 60px;
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+.nav-logo {
+  margin-top: 10px;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.nav-logo a {
+  font-size: 35px;
+  padding-left: 100px;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav {
+  background: url(./logo/Belize_Coast_Guard_logo.png);
+  background-size: 120px;
+  background-repeat: no-repeat;
+  font-size: 36px;
+}
+
+nav a {
+  color: #b59410;
+  text-decoration: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links ul li a:hover {
+  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
+    0 0 80px #b59410; /* Enhanced glow on hover */
+}
+
+.moto {
+  font-style: italic;
+  font-size: 20px;
+  width: 210px;
+  margin-left: 165px;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.moto1 {
+  font-style: italic;
+  font-size: 20px;
+  width: 250px;
+  margin-left: 152px;
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set the text color (change as needed) */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410; /* Glow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 50px;
+}
+
+/* a:link {
+  color: #b59410;
+}
+
+a:visited {
+  color: red;
+} */
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container01 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with spacing */
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.card01 {
+  display: flex;
+  justify-content: space-evenly; /* Distributes space evenly between items */
+  align-items: center; /* Aligns items vertically in the center */
+  flex-wrap: wrap; /* Allows wrapping of items if they don't fit in one line */
+  gap: 10px; /* Adds space between items */
+  padding-top: 10px;
+}
+
+.card01 img {
+  width: 25%; /* Fixed width for each image */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.card01 img:hover {
+  transform: scale(1.1); /* Scale the image up by 10% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow to give a popping effect */
+}
+
+.card02 {
+  display: flex;
+  justify-content: center; /* Distributes space evenly between items */
+  padding-top: 10px;
+}
+
+.card02 img {
+  width: 25%; /* Fixed width for each image */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.card02 img:hover {
+  transform: scale(1.1); /* Scale the image up by 10% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow to give a popping effect */
+}
+
+.history {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  height: auto;
+  text-align: center;
+}
+
+.history h2 {
+  text-align: center;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 60px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+
+  .moto,
+  .moto1 {
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo a {
+    font-size: 20px;
+  }
+
+  .nav-links ul li a {
+    font-size: 16px;
+  }
+
+  .moto,
+  .moto1 {
+    font-size: 16px;
+  }
+}
