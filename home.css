@@ -1,34 +1,19 @@
 * {
   box-sizing: border-box;
-}
-body,
-section,
-header,
-div,
-p,
-h1,
-h2,
-h3,
-ul,
-li,
-figure,
-figcaption {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: white;
   color: #333;
 }
 
 header {
   width: 100%;
-  height: 500px;
+  height: 100vh;
   position: relative;
-  height: 100vh; /* Full viewport height */
   overflow: hidden;
 }
 
@@ -40,7 +25,7 @@ header {
   height: auto;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Ensure video is behind the content */
+  z-index: -1;
 }
 
 #topbar {
@@ -72,12 +57,12 @@ header {
 .nav-logo a {
   font-size: 35px;
   padding-left: 100px;
-  text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set the text color (change as needed) */
-  font-weight: bold; /* Make the text bold */
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
   text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410; /* Glow effect */
-  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
 }
 
 nav {
@@ -87,74 +72,55 @@ nav {
   font-size: 36px;
 }
 
-nav a {
-  color: #b59410;
-  text-decoration: none;
-}
-
 .nav-links ul li a {
-  text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set the text color (change as needed) */
-  font-size: 20px; /* Adjust font size as needed */
-  font-weight: bold; /* Make the text bold */
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
   text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410; /* Glow effect */
-  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
 }
 
 .nav-links ul li a:hover {
   text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
-    0 0 80px #b59410; /* Enhanced glow on hover */
+    0 0 80px #b59410;
 }
 
-.moto {
-  font-style: italic;
-  font-size: 20px;
-  width: 210px;
-  margin-left: 165px;
-  text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set the text color (change as needed) */
-  font-weight: bold; /* Make the text bold */
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410; /* Glow effect */
-  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
+.moto,
 .moto1 {
   font-style: italic;
   font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
+}
+
+.moto {
+  width: 210px;
+  margin-left: 165px;
+}
+
+.moto1 {
   width: 250px;
   margin-left: 152px;
-  text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set the text color (change as needed) */
-  font-weight: bold; /* Make the text bold */
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410; /* Glow effect */
-  transition: text-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
 ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 li {
   margin-right: 50px;
 }
 
-/* a:link {
-  color: #b59410;
-}
-
-a:visited {
-  color: red;
-} */
-
 .container {
   width: 100%;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -166,45 +132,32 @@ a:visited {
 }
 
 .card {
-  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with spacing */
+  flex: 1 1 calc(33.333% - 20px);
   margin: 10px;
-  box-sizing: border-box;
   background-color: #f9f9f9;
   padding: 20px;
   border: 1px solid #ddd;
   text-align: center;
 }
 
-/* .cmdtContainer {
-  background-image: url(./images/bcg-commandant-bennett-office.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 400px;
-  background-color: red;
-} */
-
 .cmdtContainer {
   background-image: url(./images/bcg-commandant-bennett-office.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 15%;
+  background-position: 12%;
   width: 100%;
   height: 300px;
+  padding-right: 66px;
 }
 
 .cmdt {
   flex: 1;
   margin: 10px;
-  box-sizing: border-box;
   background-color: white;
   padding: 20px;
   text-align: center;
   margin-left: 50%;
   height: 300px;
-}
-
-.cmdt {
   font-size: 20px;
 }
 
