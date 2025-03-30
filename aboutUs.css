@@ -84,11 +84,6 @@ nav {
   font-size: 36px;
 }
 
-nav a {
-  color: #b59410;
-  text-decoration: none;
-}
-
 .nav-links ul li a {
   text-decoration: none;
   color: #fff;
@@ -154,29 +149,10 @@ li {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   text-align: center;
-}
-
-.card01,
-.card02 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding-top: 10px;
-}
-
-.card01 img,
-.card02 img {
-  width: 25%;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card01 img:hover,
-.card02 img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .history {
@@ -201,77 +177,174 @@ footer {
   bottom: 0;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
+.tab-container {
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
+.tab-button {
+  padding: 8px 15px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-bottom: none;
   cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px 5px 0 0;
 }
 
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-button.active {
+  background-color: #b59410;
+  color: white;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  text-align: center;
+}
+
+.tab-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.special-forces-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.special-forces-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+}
+
+/* Add these media queries at the end of your existing CSS */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .nav-logo a {
+    font-size: 28px;
+    padding-left: 60px;
   }
 
-  .nav-links ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .nav-links {
+    right: 30px;
+    margin-top: 40px;
   }
 
-  .nav-links ul li {
-    margin: 10px 0;
+  .nav-links ul li a {
+    font-size: 18px;
   }
 
   .moto,
   .moto1 {
     font-size: 18px;
+    margin-left: 100px;
   }
 
-  .container {
+  .history {
+    padding: 15px;
+    font-size: medium;
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    min-height: 300px;
+  }
+
+  #header-video {
+    height: 100%;
+    width: auto;
+  }
+
+  #topbar {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .nav-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .card {
-    flex: 1 1 100%;
+  .nav-logo {
     margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-logo a {
+    padding-left: 0;
+  }
+
+  .nav-links {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links ul li {
+    margin: 5px 15px;
+  }
+
+  .moto,
+  .moto1 {
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .tab-buttons {
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    padding: 6px 10px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 480px) {
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
   .nav-logo a {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .nav-links ul li a {
@@ -281,5 +354,35 @@ footer {
   .moto,
   .moto1 {
     font-size: 16px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .history h2 {
+    font-size: 20px;
+  }
+
+  .history p {
+    font-size: 16px;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .nav-links ul li {
+    margin: 5px 10px;
+  }
+
+  .tab-button {
+    padding: 5px 8px;
+    font-size: 12px;
   }
 }

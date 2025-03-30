@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>News - Belize Coast Guard</title>
+    <link
+      rel="icon"
+      href="./logo/Belize_Coast_Guard_logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <video autoplay muted loop id="header-video">
+          <source src="./videos/BELIZE COAST GUARD.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div id="topbar">
+          <div class="nav-container">
+            <div class="nav-logo">
+              <a href="./home.html">Belize Coast Guard</a>
+            </div>
+            <div class="nav-links">
+              <ul>
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./recruitment.html">RECRUITMENT</a></li>
+                <li><a href="./aboutUs.html">ABOUT US</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="moto">UTRINQUE PARATUS</div>
+          <div class="moto1">READY FOR ANYTHING</div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <h2>COURAGE</h2>
+        </div>
+        <div class="card">
+          <h2>COMMITMENT</h2>
+        </div>
+        <div class="card">
+          <h2>RESPECT</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="emergency-banner">
+      <p>FOR EMERGENCIES AT SEA: CALL 911 or VHF RADIO CHANNEL 16</p>
+    </div>
+
+    <main class="contact-container">
+      <section class="contact-info">
+        <h2 class="section-title">Contact Information</h2>
+
+        <div class="info-item">
+          <span class="info-label">Headquarters Address:</span>
+          <p>
+            Belize Coast Guard Headquarters<br />
+            4 1/2 Miles, George Price Highway<br />
+            Belize City, Belize
+          </p>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">General Inquiries:</span>
+          <p>
+            Phone: <br />
+            Fax: <br />
+            Email: coastguard@bncg.gov.bz <br />
+            Website: bcg.gov.bz
+          </p>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">Operations Center (24/7):</span>
+          <p>
+            Phone: +501 280-5262<br />
+            Cell: +501 614 1239 <br />
+          </p>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">Media Relations:</span>
+          <p>
+            Phone: <br />
+            Email:
+          </p>
+        </div>
+
+        <div class="map-container">
+          <!-- Embedded Google Map would go here -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.123456789012!2d-88.2408457!3d17.4867806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5c59f1ad97112f%3A0xdd70b00bd53d1bb3!2sBelize%20Coast%20Guard!5e0!3m2!1sen!2sbz!4v1234567890123!5m2!1sen!2sbz"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <h2 class="section-title">Send Us a Message</h2>
+        <form action="/submit-contact" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-input"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <select id="subject" name="subject" class="form-input" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="operations">Operations Question</option>
+              <option value="media">Media Inquiry</option>
+              <option value="recruitment">Recruitment</option>
+              <option value="compliment">Compliment</option>
+              <option value="complaint">Complaint</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-textarea"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <br /><br /><br />
+    <footer>
+      <p>&copy; 2025 BELIZE COAST GUARD</p>
+    </footer>
+
+    <script src="./javascript/myscript.js"></script>
+  </body>
+</html>

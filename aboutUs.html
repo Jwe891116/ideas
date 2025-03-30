@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="aboutUs.css" />
     <title>Home - Belize Coast Guard</title>
-    <!-- add icon link -->
     <link
       rel="icon"
       href="./logo/Belize_Coast_Guard_logo.png"
@@ -89,27 +88,60 @@
         effectiveness. <br />The BCG has established multiple bases along
         Belize's coastline, including in Belize City, Big Creek, <br />
         Calabash, Hunting Caye and San Pedro, to improve its coverage and
-        response times. <div class="container01">
-      <div class="card01"> 
-        <img src="./images/hq.jpg" alt="hq" class="enlarge-image" onclick="openModal('./images/hq.jpg')">
-        <img src="./images/san pedro.jpg" alt="san-pedro" class="enlarge-image" onclick="openModal('./images/san pedro.jpg')">
-        <img src="./images/calabash fob.jpg" alt="calabash" class="enlarge-image" onclick="openModal('./images/calabash fob.jpg')">
-        <img src="./images/big creek.jpg" alt="big-creek" class="enlarge-image" onclick="openModal('./images/big creek.jpg')">
-        <img src="./images/hunting caye.jpg" alt="hunting-caye" class="enlarge-image" onclick="openModal('./images/hunting caye.jpg')">
-      </div>
-    </div>
-    <div id="myModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="img01">
-</div>
-    <br>The force has also developed a specialized unit,
-        its Special Forces Unit, to address specific threats like drug
-        interdiction and port security. 
-        <div class="container01">
-      <div class="card02"> 
-        <img src="./images/special forces.jpg" alt="special-forces" class="enlarge-image" onclick="openModal('./images/special forces.jpg')">
-      </div>
+        response times.
       </p>
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="openTab('hq')">
+            Headquarters
+          </button>
+          <button class="tab-button" onclick="openTab('san-pedro')">
+            San Pedro
+          </button>
+          <button class="tab-button" onclick="openTab('calabash')">
+            Calabash
+          </button>
+          <button class="tab-button" onclick="openTab('big-creek')">
+            Big Creek
+          </button>
+          <button class="tab-button" onclick="openTab('hunting-caye')">
+            Hunting Caye
+          </button>
+        </div>
+        <div id="hq" class="tab-content" style="display: block">
+          <img src="./images/hq.jpg" alt="Headquarters" class="tab-image" />
+        </div>
+        <div id="san-pedro" class="tab-content">
+          <img src="./images/san pedro.jpg" alt="San Pedro" class="tab-image" />
+        </div>
+        <div id="calabash" class="tab-content">
+          <img
+            src="./images/calabash fob.jpg"
+            alt="Calabash"
+            class="tab-image"
+          />
+        </div>
+        <div id="big-creek" class="tab-content">
+          <img src="./images/big creek.jpg" alt="Big Creek" class="tab-image" />
+        </div>
+        <div id="hunting-caye" class="tab-content">
+          <img
+            src="./images/hunting caye.jpg"
+            alt="Hunting Caye"
+            class="tab-image"
+          />
+        </div>
+      </div>
+      <br />The force has also developed a specialized unit, its Special Forces
+      Unit, to address specific threats like drug interdiction and port
+      security.
+      <div class="special-forces-container">
+        <img
+          src="./images/special forces.jpg"
+          alt="Special Forces"
+          class="special-forces-image"
+        />
+      </div>
     </div>
 
     <div class="history">
@@ -145,6 +177,6 @@
     <footer>
       <p>&copy; 2025 BELIZE COAST GUARD</p>
     </footer>
+    <script src="./javascript/myscript.js"></script>
   </body>
-  <script src="./javascript/myscript.js"></script>
 </html>

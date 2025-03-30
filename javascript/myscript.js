@@ -1,15 +1,35 @@
-function openModal(imageSrc) {
-  var modal = document.getElementById("myModal");
-  var modalImg = document.getElementById("img01");
-  modal.style.display = "block";
-  modalImg.src = imageSrc;
+//Mobile
+document
+  .querySelector(".mobile-menu-toggle")
+  .addEventListener("click", function () {
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
+
+//About Us Fuctions
+function openTab(tabId) {
+  // Hide all tab contents except Special Forces
+  const tabContents = document.querySelectorAll(
+    ".tab-content:not(.special-forces-content)"
+  );
+  tabContents.forEach((content) => {
+    content.style.display = "none";
+  });
+
+  // Remove active class from all buttons
+  const tabButtons = document.querySelectorAll(".tab-button");
+  tabButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  // Show the selected tab content
+  document.getElementById(tabId).style.display = "block";
+
+  // Add active class to the clicked button
+  event.currentTarget.classList.add("active");
 }
 
-function closeModal() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}
-
+//News functions
+//Slider
 let slideIndex = 0;
 
 function showSlide(index) {
@@ -33,3 +53,24 @@ function prevSlide() {
 }
 
 setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+
+//Container
+function showNewsModal(newsIndex) {
+  const newsContent = document.getElementById(
+    `news-content-${newsIndex}`
+  ).innerHTML;
+  document.getElementById("modalNewsContent").innerHTML = newsContent;
+  document.getElementById("newsModal").style.display = "block";
+}
+
+function closeNewsModal() {
+  document.getElementById("newsModal").style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function (event) {
+  const modal = document.getElementById("newsModal");
+  if (event.target == modal) {
+    closeNewsModal();
+  }
+};
