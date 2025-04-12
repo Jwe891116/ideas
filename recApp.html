@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="recApp.css" />
+    <title>News - Belize Coast Guard</title>
+    <link
+      rel="icon"
+      href="./logo/Belize_Coast_Guard_logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <video autoplay muted loop id="header-video">
+          <source src="./videos/BELIZE COAST GUARD.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div id="topbar">
+          <div class="nav-container">
+            <div class="nav-logo">
+              <a href="./home.html">Belize Coast Guard</a>
+            </div>
+            <div class="nav-links">
+              <ul>
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./recruitment.html">RECRUITMENT</a></li>
+                <li><a href="./aboutUs.html">ABOUT US</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="moto">UTRINQUE PARATUS</div>
+          <div class="moto1">READY FOR ANYTHING</div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <h2>COURAGE</h2>
+        </div>
+        <div class="card">
+          <h2>COMMITMENT</h2>
+        </div>
+        <div class="card">
+          <h2>RESPECT</h2>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="form-container">
+        <div class="instructions">
+          <h3><i class="fas fa-info-circle"></i> Instructions</h3>
+          <p>
+            This application must be completed by the applicant in BLOCK
+            letters. Please complete all sections as thoroughly as possible. It
+            is necessary to provide complete information, as this will be used
+            to determine eligibility.
+          </p>
+          <div class="required-docs">
+            <h4><i class="fas fa-file-alt"></i> Required Documents:</h4>
+            <ul>
+              <li>Copy of the most recent educational qualification</li>
+              <li>Copy of a recent Police Record</li>
+              <li>Proof of Nationality (Copy of Birth Certificate)</li>
+              <li>Copy of Social Security Card</li>
+              <li>Two (2) Letters of Recommendation from credible sources</li>
+              <li>Copy of Covid19 Vaccination Card</li>
+            </ul>
+          </div>
+        </div>
+
+        <form id="recruitmentForm">
+          <!-- Section A - Personal Information -->
+          <section class="form-section" id="sectionA">
+            <h3>
+              <i class="fas fa-user"></i> Section A - Personal Information
+            </h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="middleName">Middle Name:</label>
+                <input
+                  type="text"
+                  id="middleName"
+                  name="middleName"
+                  placeholder="Middle Name"
+                />
+              </div>
+              <div class="form-group photo-upload">
+                <label>Photo:</label>
+                <div class="upload-container">
+                  <input type="file" id="photo" name="photo" accept="image/*" />
+                  <label for="photo" class="upload-btn">Choose File</label>
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth (dd/mm/yy):</label>
+                <input type="date" id="dob" name="dob" required />
+              </div>
+              <div class="form-group">
+                <label for="aliases">Aliases/Nicknames:</label>
+                <input
+                  type="text"
+                  id="aliases"
+                  name="aliases"
+                  placeholder="Aliases/Nicknames"
+                />
+              </div>
+              <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                  <label
+                    ><input type="radio" name="gender" value="Male" required />
+                    Male</label
+                  >
+                  <label
+                    ><input type="radio" name="gender" value="Female" />
+                    Female</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <input
+                  type="text"
+                  id="nationality"
+                  name="nationality"
+                  placeholder="Nationality"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="placeOfBirth">Place of Birth:</label>
+                <input
+                  type="text"
+                  id="placeOfBirth"
+                  name="placeOfBirth"
+                  placeholder="Place of Birth"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="age">Age:</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  min="18"
+                  placeholder="Age"
+                  required
+                />
+              </div>
+              <div class="form-group full-width">
+                <label for="homeAddress">Home Address:</label>
+                <input
+                  type="text"
+                  id="homeAddress"
+                  name="homeAddress"
+                  placeholder="Home Address"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Marital Status:</label>
+                <div class="radio-group">
+                  <label
+                    ><input
+                      type="radio"
+                      name="maritalStatus"
+                      value="Single"
+                      required
+                    />
+                    Single</label
+                  >
+                  <label
+                    ><input type="radio" name="maritalStatus" value="Married" />
+                    Married</label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="maritalStatus"
+                      value="Divorced"
+                    />
+                    Divorced</label
+                  >
+                  <label
+                    ><input type="radio" name="maritalStatus" value="Widowed" />
+                    Widowed</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="homeNumber">Home Number:</label>
+                <input
+                  type="tel"
+                  id="homeNumber"
+                  name="homeNumber"
+                  placeholder="Home Number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cellNumber">Cell Number:</label>
+                <input
+                  type="tel"
+                  id="cellNumber"
+                  name="cellNumber"
+                  placeholder="Cell Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="whatsappNumber">WhatsApp Number:</label>
+                <input
+                  type="tel"
+                  id="whatsappNumber"
+                  name="whatsappNumber"
+                  placeholder="WhatsApp Number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="primaryEmail">Primary Email Address:</label>
+                <input
+                  type="email"
+                  id="primaryEmail"
+                  name="primaryEmail"
+                  placeholder="Primary Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="alternateEmail">Alternate Email Address:</label>
+                <input
+                  type="email"
+                  id="alternateEmail"
+                  name="alternateEmail"
+                  placeholder="Alternate Email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="hairColor">Color of Hair:</label>
+                <input
+                  type="text"
+                  id="hairColor"
+                  name="hairColor"
+                  placeholder="Hair Color"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="eyeColor">Color of Eye:</label>
+                <input
+                  type="text"
+                  id="eyeColor"
+                  name="eyeColor"
+                  placeholder="Eye Color"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="religion">Religion:</label>
+                <input
+                  type="text"
+                  id="religion"
+                  name="religion"
+                  placeholder="Religion"
+                />
+              </div>
+              <div class="form-group">
+                <label for="height">Height (ft ins):</label>
+                <input
+                  type="text"
+                  id="height"
+                  name="height"
+                  placeholder="e.g. 5' 10"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="weight">Weight (lbs):</label>
+                <input
+                  type="number"
+                  id="weight"
+                  name="weight"
+                  placeholder="Weight"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="bloodType">Blood Type:</label>
+                <select id="bloodType" name="bloodType" required>
+                  <option value="">Select</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="shoeSize">Shoe Size:</label>
+                <input
+                  type="text"
+                  id="shoeSize"
+                  name="shoeSize"
+                  placeholder="Shoe Size"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="dependentChildren"
+                  >Legally Dependent Children:</label
+                >
+                <input
+                  type="number"
+                  id="dependentChildren"
+                  name="dependentChildren"
+                  min="0"
+                  placeholder="Number of Children Dependence"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ssn">Social Security Number:</label>
+                <input
+                  type="text"
+                  id="ssn"
+                  name="ssn"
+                  placeholder="Socail  Security Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="passportNumber">Passport Number:</label>
+                <input
+                  type="text"
+                  id="passportNumber"
+                  name="passportNumber"
+                  placeholder="Passport Number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="passportExpiry">Passport Expiry Date:</label>
+                <input type="date" id="passportExpiry" name="passportExpiry" />
+              </div>
+              <div class="form-group">
+                <label>Swimming Ability:</label>
+                <div class="radio-group">
+                  <label
+                    ><input
+                      type="radio"
+                      name="swimming"
+                      value="None"
+                      required
+                    />
+                    None</label
+                  >
+                  <label
+                    ><input type="radio" name="swimming" value="Weak" />
+                    Weak</label
+                  >
+                  <label
+                    ><input type="radio" name="swimming" value="Intermediate" />
+                    Intermediate</label
+                  >
+                  <label
+                    ><input type="radio" name="swimming" value="Strong" />
+                    Strong</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Willing to work anywhere in Belize?</label>
+                <div class="radio-group">
+                  <label
+                    ><input
+                      type="radio"
+                      name="workAnywhere"
+                      value="Yes"
+                      required
+                    />
+                    Yes</label
+                  >
+                  <label
+                    ><input type="radio" name="workAnywhere" value="No" />
+                    No</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Currently in Public Service of Belize?</label>
+                <div class="radio-group">
+                  <label
+                    ><input
+                      type="radio"
+                      name="publicService"
+                      value="Yes"
+                      required
+                    />
+                    Yes</label
+                  >
+                  <label
+                    ><input type="radio" name="publicService" value="No" />
+                    No</label
+                  >
+                </div>
+              </div>
+              <div
+                class="form-group"
+                id="employmentStatusGroup"
+                style="display: none"
+              >
+                <label for="employmentStatus">Employment Status:</label>
+                <input
+                  type="text"
+                  id="employmentStatus"
+                  name="employmentStatus"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- Section B - Education -->
+          <section class="form-section" id="sectionB">
+            <h3>
+              <i class="fas fa-graduation-cap"></i> Section B - Education and
+              Academic Qualification
+            </h3>
+            <p class="section-description">
+              Please describe secondary, post-secondary, courses and training
+              which have given you work related knowledge and skills. Copy of
+              the official documentation is to be scanned and attached to your
+              application submission. Applicant must possess a minimum
+              qualification of a High School Diploma.
+            </p>
+
+            <div class="education-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Level</th>
+                    <th>School(s) Attended</th>
+                    <th>Date From (Year only)</th>
+                    <th>Date To (Year only)</th>
+                  </tr>
+                </thead>
+                <tbody id="educationRows">
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        name="educationLevel[]"
+                        placeholder="Primary"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="schoolAttended[]"
+                        placeholder="School"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="educationFrom[]"
+                        min="1900"
+                        max="2099"
+                        placeholder="Year"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="educationTo[]"
+                        min="1900"
+                        max="2099"
+                        placeholder="Year"
+                        required
+                      />
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        name="educationLevel[]"
+                        placeholder="Secondary"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="schoolAttended[]"
+                        placeholder="School"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="educationFrom[]"
+                        min="1900"
+                        max="2099"
+                        placeholder="Year"
+                        required
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="educationTo[]"
+                        min="1900"
+                        max="2099"
+                        placeholder="Year"
+                        required
+                      />
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" class="add-row-btn" id="addEducationRow">
+                <i class="fas fa-plus"></i> Add Education
+              </button>
+            </div>
+          </section>
+
+          <!-- Section C - Work Experience -->
+          <section class="form-section" id="sectionC">
+            <h3>
+              <i class="fas fa-briefcase"></i> Section C - Work Experience
+            </h3>
+
+            <div class="work-experience">
+              <h4>Present Employer</h4>
+              <br />
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="presentEmployer">Employer Name:</label>
+                  <input
+                    type="text"
+                    id="presentEmployer"
+                    name="presentEmployer"
+                    placeholder="Employer Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="presentEmployerAddress">Employer Address:</label>
+                  <input
+                    type="text"
+                    id="presentEmployerAddress"
+                    name="presentEmployerAddress"
+                    placeholder="Employer Address"
+                  />
+                </div>
+                <br />
+                <div class="form-group">
+                  <label for="presentEmployerFrom"
+                    >Date From (Year only):</label
+                  >
+                  <input
+                    type="number"
+                    id="presentEmployerFrom"
+                    name="presentEmployerFrom"
+                    min="1900"
+                    max="2099"
+                    placeholder="Date From"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="presentEmployerTo">Date To (Year only):</label>
+                  <input
+                    type="number"
+                    id="presentEmployerTo"
+                    name="presentEmployerTo"
+                    min="1900"
+                    max="2099"
+                    placeholder="Date To"
+                  />
+                </div>
+              </div>
+
+              <h4>Previous Employers (Last 2 Years)</h4>
+              <div class="previous-employers-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Employer Name</th>
+                      <th>Job Description/Title</th>
+                      <th>Date From (Year only)</th>
+                      <th>Date To (Year only)</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="previousEmployersRows">
+                    <!-- Rows will be added here -->
+                  </tbody>
+                </table>
+                <button
+                  type="button"
+                  class="add-row-btn"
+                  id="addPreviousEmployer"
+                >
+                  <i class="fas fa-plus"></i> Add Previous Employer
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section D - Military Experience -->
+          <section class="form-section" id="sectionD">
+            <h3>
+              <i class="fas fa-shield-alt"></i> Section D - Military Experience
+            </h3>
+
+            <div class="military-experience-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>Unit/Organization</th>
+                    <th>Date From (Year only)</th>
+                    <th>Date To (Year only)</th>
+                    <th>Last Rank</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="militaryExperienceRows">
+                  <!-- Rows will be added here -->
+                </tbody>
+              </table>
+              <button
+                type="button"
+                class="add-row-btn"
+                id="addMilitaryExperience"
+              >
+                <i class="fas fa-plus"></i> Add Military Experience
+              </button>
+            </div>
+            <br />
+
+            <div class="form-group">
+              <label>Do you have any objection in bearing arms?</label>
+              <div class="radio-group">
+                <label
+                  ><input
+                    type="radio"
+                    name="bearingArms"
+                    value="Yes"
+                    required
+                  />
+                  Yes</label
+                >
+                <label
+                  ><input type="radio" name="bearingArms" value="No" />
+                  No</label
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Section E - References -->
+          <section class="form-section" id="sectionE">
+            <h3><i class="fas fa-address-book"></i> Section E - References</h3>
+            <p class="section-description">
+              Note: Applicant is to attach two (2) letters of recommendation
+              from credible sources.
+            </p>
+
+            <div class="references-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Relationship</th>
+                    <th>Number of Years Known</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="referencesRows">
+                  <tr>
+                    <td>
+                      <input type="text" name="referenceName[]" required />
+                    </td>
+                    <td><input type="tel" name="referenceTel[]" required /></td>
+                    <td>
+                      <input
+                        type="text"
+                        name="referenceRelationship[]"
+                        required
+                        placeholder="Relationship"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="referenceYearsKnown[]"
+                        min="1"
+                        required
+                        placeholder="Number of Years Known"
+                      />
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="referenceName[]" required />
+                    </td>
+                    <td><input type="tel" name="referenceTel[]" required /></td>
+                    <td>
+                      <input
+                        type="text"
+                        name="referenceRelationship[]"
+                        required
+                        placeholder="Name"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="referenceYearsKnown[]"
+                        min="1"
+                        required
+                        placeholder="Phone Number"
+                      />
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" class="add-row-btn" id="addReference">
+                <i class="fas fa-plus"></i> Add Reference
+              </button>
+            </div>
+          </section>
+
+          <!-- Document Uploads -->
+          <section class="form-section" id="documentsSection">
+            <h3>
+              <i class="fas fa-file-upload"></i> Required Document Uploads
+            </h3>
+
+            <div class="document-uploads">
+              <div class="form-group">
+                <label for="educationDoc">Educational Qualification:</label>
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="educationDoc"
+                    name="educationDoc"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="educationDoc" class="upload-btn"
+                    >Choose File</label
+                  >
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="policeRecord">Police Record:</label>
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="policeRecord"
+                    name="policeRecord"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="policeRecord" class="upload-btn"
+                    >Choose File</label
+                  >
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="birthCertificate">Birth Certificate:</label>
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="birthCertificate"
+                    name="birthCertificate"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="birthCertificate" class="upload-btn"
+                    >Choose File</label
+                  >
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ssCard">Social Security Card:</label>
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="ssCard"
+                    name="ssCard"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="ssCard" class="upload-btn">Choose File</label>
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="recommendationLetter1"
+                  >Recommendation Letter 1:</label
+                >
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="recommendationLetter1"
+                    name="recommendationLetter1"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="recommendationLetter1" class="upload-btn"
+                    >Choose File</label
+                  >
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="recommendationLetter2"
+                  >Recommendation Letter 2:</label
+                >
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="recommendationLetter2"
+                    name="recommendationLetter2"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="recommendationLetter2" class="upload-btn"
+                    >Choose File</label
+                  >
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="vaccinationCard">Covid19 Vaccination Card:</label>
+                <div class="upload-container">
+                  <input
+                    type="file"
+                    id="vaccinationCard"
+                    name="vaccinationCard"
+                    accept=".pdf,.jpg,.png"
+                    required
+                  />
+                  <label for="vaccinationCard" class="upload-btn"
+                    >Choose File</label
+                  >
+                  <span class="file-name">No file chosen</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Declaration -->
+          <section class="form-section declaration">
+            <h3><i class="fas fa-file-signature"></i> Declaration</h3>
+            <div class="declaration-text">
+              <p>
+                Please read carefully before signing. This application is not
+                valid unless signed by the applicant.
+              </p>
+              <p>
+                Your signature on this application form is your consent for the
+                condition of being considered for employment in the Belize Coast
+                Guard.
+              </p>
+              <p>
+                I certify that the information provided in this application and
+                attachments are true and complete. I understand that if any
+                information in this application or attachments are found to be
+                untrue or incomplete, my application may be rejected or I may be
+                dismissed in the event that I am the successful applicant.
+              </p>
+            </div>
+
+            <div class="signature-section">
+              <div class="form-group">
+                <label for="signature">Signature:</label>
+                <div class="signature-pad">
+                  <canvas
+                    id="signatureCanvas"
+                    width="400"
+                    height="150"
+                  ></canvas>
+                  <button type="button" id="clearSignature" class="clear-btn">
+                    Clear Signature
+                  </button>
+                  <input type="hidden" id="signature" name="signature" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="signatureDate">Date:</label>
+                <input
+                  type="date"
+                  id="signatureDate"
+                  name="signatureDate"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+
+          <div class="form-actions">
+            <button type="button" id="saveDraft" class="secondary-btn">
+              <i class="fas fa-save"></i> Save Draft
+            </button>
+            <button type="submit" id="submitForm" class="primary-btn">
+              <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <br /><br /><br />
+    <footer>
+      <p>&copy; 2025 BELIZE COAST GUARD</p>
+    </footer>
+
+    <script src="/javascript/myscript.js"></script>
+  </body>
+</html>
