@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="recApp.css" />
-    <title>News - Belize Coast Guard</title>
+    <title>Recruitment - Belize Coast Guard</title>
     <link
       rel="icon"
       href="./logo/Belize_Coast_Guard_logo.png"
       type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
@@ -471,6 +475,7 @@
                     <th>School(s) Attended</th>
                     <th>Date From (Year only)</th>
                     <th>Date To (Year only)</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody id="educationRows">
@@ -511,7 +516,11 @@
                         required
                       />
                     </td>
-                    <td></td>
+                    <td>
+                      <button type="button" class="delete-btn" hidden>
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td>
@@ -550,7 +559,11 @@
                         required
                       />
                     </td>
-                    <td></td>
+                    <td>
+                      <button type="button" class="delete-btn" hidden>
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -716,9 +729,21 @@
                 <tbody id="referencesRows">
                   <tr>
                     <td>
-                      <input type="text" name="referenceName[]" required />
+                      <input
+                        type="text"
+                        name="referenceName[]"
+                        required
+                        placeholder="Name"
+                      />
                     </td>
-                    <td><input type="tel" name="referenceTel[]" required /></td>
+                    <td>
+                      <input
+                        type="tel"
+                        name="referenceTel[]"
+                        required
+                        placeholder="Phone Number"
+                      />
+                    </td>
                     <td>
                       <input
                         type="text"
@@ -733,22 +758,38 @@
                         name="referenceYearsKnown[]"
                         min="1"
                         required
-                        placeholder="Number of Years Known"
+                        placeholder="Years Known"
                       />
                     </td>
-                    <td></td>
+                    <td>
+                      <button type="button" class="delete-btn" hidden>
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td>
-                      <input type="text" name="referenceName[]" required />
+                      <input
+                        type="text"
+                        name="referenceName[]"
+                        required
+                        placeholder="Name"
+                      />
                     </td>
-                    <td><input type="tel" name="referenceTel[]" required /></td>
+                    <td>
+                      <input
+                        type="tel"
+                        name="referenceTel[]"
+                        required
+                        placeholder="Phone Number"
+                      />
+                    </td>
                     <td>
                       <input
                         type="text"
                         name="referenceRelationship[]"
                         required
-                        placeholder="Name"
+                        placeholder="Relationship"
                       />
                     </td>
                     <td>
@@ -757,10 +798,14 @@
                         name="referenceYearsKnown[]"
                         min="1"
                         required
-                        placeholder="Phone Number"
+                        placeholder="Years Known"
                       />
                     </td>
-                    <td></td>
+                    <td>
+                      <button type="button" class="delete-btn" hidden>
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -960,6 +1005,6 @@
       <p>&copy; 2025 BELIZE COAST GUARD</p>
     </footer>
 
-    <script src="/javascript/myscript.js"></script>
+    <script src="./javascript/appScript.js"></script>
   </body>
 </html>

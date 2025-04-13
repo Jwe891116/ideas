@@ -293,6 +293,7 @@ li {
   width: 80%;
   max-width: 800px;
   position: relative;
+  text-align: justify;
 }
 
 .close-modal {
