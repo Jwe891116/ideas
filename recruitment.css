@@ -1,5 +1,3 @@
-/* recruitment.css - Updated to match home page style */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +8,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;
   color: #333;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -25,6 +26,7 @@ header {
   left: 50%;
   width: 100%;
   height: auto;
+  min-height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -32,32 +34,36 @@ header {
 
 #topbar {
   height: 250px;
+  position: relative;
 }
 
 .nav-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
 }
 
-.nav-links {
-  position: fixed;
-  right: 70px;
-  margin-top: 60px;
-  flex: 2;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 20px;
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  justify-self: right;
 }
 
 .nav-logo {
-  margin-top: 10px;
-  margin-left: 20px;
-  flex: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-logo a {
-  font-size: 35px;
+  font-size: clamp(24px, 4vw, 35px);
   padding-left: 100px;
   text-decoration: none;
   color: #fff;
@@ -67,6 +73,13 @@ header {
   transition: text-shadow 0.3s ease;
 }
 
+.nav-links {
+  position: fixed;
+  right: 70px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
 nav {
   background: url(./logo/Belize_Coast_Guard_logo.png);
   background-size: 120px;
@@ -74,10 +87,16 @@ nav {
   font-size: 36px;
 }
 
+.nav-links ul {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 50px;
+}
+
 .nav-links ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: bold;
   text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
     0 0 40px #b59410;
@@ -89,35 +108,18 @@ nav {
     0 0 80px #b59410;
 }
 
-.moto,
 .moto1 {
   font-style: italic;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
     0 0 40px #b59410;
   transition: text-shadow 0.3s ease;
-}
-
-.moto {
-  width: 210px;
-  margin-left: 165px;
-}
-
-.moto1 {
   width: 250px;
   margin-left: 152px;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-}
-
-li {
-  margin-right: 50px;
+  text-align: center;
 }
 
 .container {
@@ -127,26 +129,7 @@ li {
   padding: 20px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card {
-  flex: 1 1 calc(33.333% - 20px);
-  margin: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 10px;
-}
-
-/* Hero Section - Updated to match home page style */
+/* Hero Section */
 #hero {
   background-color: #b59410;
   background-size: contain;
@@ -192,12 +175,14 @@ li {
 
 .content-section h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .image-gallery {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .image-gallery img {
@@ -206,13 +191,14 @@ li {
   border-radius: 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  margin-bottom: 15px;
 }
 
 .image-gallery img:hover {
   transform: scale(1.03);
 }
 
-/* Update the requirements section styles */
+/* Requirements Section */
 .requirements-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -230,15 +216,14 @@ li {
 }
 
 .requirement-card ul {
-  display: block; /* Change from flex to block for vertical layout */
-  padding-left: 20px; /* Add some padding for bullet points */
+  display: block;
+  padding-left: 20px;
 }
 
 .requirement-card li {
-  margin: 10px 0; /* Vertical margin between list items */
-  text-align: left; /* Align text to the left */
-  list-style-type: disc; /* Add bullet points */
-  display: list-item; /* Ensure proper list item display */
+  margin: 10px 0;
+  text-align: left;
+  list-style-type: disc;
 }
 
 /* Benefits Section */
@@ -281,64 +266,135 @@ footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
-  position: relative;
-  bottom: 0;
 }
 
-/* Responsive Design */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .nav-links {
+    right: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    right: 40px;
+  }
+
+  .nav-logo a {
+    font-size: 30px;
+    padding-left: 80px;
+  }
+
+  .nav-links ul {
+    gap: 30px;
+  }
+
+  .nav-links ul li a {
+    font-size: 18px;
+  }
+
+  .moto1 {
+    font-size: 18px;
+    margin-left: 130px;
+  }
+}
+
 @media (max-width: 768px) {
-  .image-gallery {
+  .mobile-menu-toggle {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+    background: transparent;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    color: #b59410;
+    font-size: 24px;
+  }
+
+  .nav-container {
+    background: transparent !important;
+    position: relative;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: auto;
+    min-width: 200px;
+    background-color: transparent;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+  }
+
+  .nav-links ul {
+    display: flex;
     flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links ul li {
+    margin: 5px 0;
+    text-align: right;
+  }
+
+  #header-video {
+    z-index: -1;
+  }
+
+  .moto1 {
+    display: none;
   }
 
   .image-gallery img {
     width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links ul li {
-    margin: 10px 0;
-  }
-
-  .moto,
-  .moto1 {
-    font-size: 18px;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    flex: 1 1 100%;
-    margin: 10px 0;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .nav-logo a {
+    font-size: 24px;
+    padding-left: 60px;
+  }
+
+  nav {
+    background-size: 80px;
+  }
+
+  .moto1 {
+    font-size: 16px;
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 400px) {
   .nav-logo a {
     font-size: 20px;
+    padding-left: 50px;
+  }
+
+  nav {
+    background-size: 60px;
+  }
+
+  .moto1 {
+    font-size: 14px;
+    margin-left: 60px;
   }
 
   .nav-links ul li a {
-    font-size: 16px;
-  }
-
-  .moto,
-  .moto1 {
     font-size: 16px;
   }
 }
