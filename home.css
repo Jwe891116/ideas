@@ -8,6 +8,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;
   color: #333;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -23,6 +26,7 @@ header {
   left: 50%;
   width: 100%;
   height: auto;
+  min-height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -30,32 +34,36 @@ header {
 
 #topbar {
   height: 250px;
+  position: relative;
 }
 
 .nav-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
 }
 
-.nav-links {
-  position: fixed;
-  right: 70px;
-  margin-top: 60px;
-  flex: 2;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 20px;
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  justify-self: right;
 }
 
 .nav-logo {
-  margin-top: 10px;
-  margin-left: 20px;
-  flex: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-logo a {
-  font-size: 35px;
+  font-size: clamp(24px, 4vw, 35px);
   padding-left: 100px;
   text-decoration: none;
   color: #fff;
@@ -65,6 +73,13 @@ header {
   transition: text-shadow 0.3s ease;
 }
 
+.nav-links {
+  position: fixed;
+  right: 70px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
 nav {
   background: url(./logo/Belize_Coast_Guard_logo.png);
   background-size: 120px;
@@ -72,10 +87,16 @@ nav {
   font-size: 36px;
 }
 
+.nav-links ul {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 50px;
+}
+
 .nav-links ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: bold;
   text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
     0 0 40px #b59410;
@@ -90,7 +111,7 @@ nav {
 .moto,
 .moto1 {
   font-style: italic;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -99,23 +120,10 @@ nav {
   transition: text-shadow 0.3s ease;
 }
 
-.moto {
-  width: 210px;
-  margin-left: 165px;
-}
-
 .moto1 {
   width: 250px;
   margin-left: 152px;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-}
-
-li {
-  margin-right: 50px;
+  text-align: center;
 }
 
 .container {
@@ -126,14 +134,13 @@ li {
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .card {
-  flex: 1 1 calc(33.333% - 20px);
-  margin: 10px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   text-align: center;
@@ -141,7 +148,7 @@ li {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  padding: 10px;
+  padding: 20px;
 }
 
 .vision-container {
@@ -151,8 +158,6 @@ li {
 }
 
 .vision-card {
-  flex: 1 1 calc(33.333% - 20px);
-  margin: 10px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   text-align: center;
@@ -160,90 +165,31 @@ li {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  padding: 10px;
-}
-
-.cmdtContainer {
-  background-image: url(./images/bcg-commandant-bennett-office.jpg);
-  background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: 12%;
-  width: 100%;
-  height: 250px;
-  padding-right: 66px;
-}
-
-.cmdt {
-  flex: 1;
-  margin: 10px;
-  background-color: white;
   padding: 20px;
-  text-align: center;
-  margin-left: 50%;
-  height: 300px;
-  font-size: 20px;
+  margin-bottom: 40px;
 }
 
-.xoContainer {
-  background-image: url(./images/bcg-alma-pinelo-wonder-woman.jpg);
-  background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: 12%;
-  width: 100%;
-  height: 250px;
-  padding-right: 66px;
-}
-
-.xo {
-  flex: 1;
-  margin: 10px;
-  background-color: white;
-  padding: 20px;
-  text-align: center;
-  margin-left: 50%;
-  height: 300px;
-  font-size: 20px;
-}
-
-.legalContainer {
-  background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: 12%;
-  width: 100%;
-  height: 250px;
-  padding-right: 66px;
-}
-
-.legal {
-  flex: 1;
-  margin: 10px;
-  background-color: white;
-  padding: 20px;
-  text-align: center;
-  margin-left: 50%;
-  height: 300px;
-  font-size: 20px;
-}
-
+.cmdtContainer,
+.xoContainer,
+.legalContainer,
 .adjContainer {
-  background: url(./images/welch.jpg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-repeat: no-repeat;
   background-size: 500px;
   background-position: 12%;
-  background-position-y: 20%;
   width: 100%;
-  height: 250px;
-  padding-right: 66px;
+  min-height: 250px;
+  margin-bottom: 40px;
 }
 
+.cmdt,
+.xo,
+.legal,
 .adj {
-  flex: 1;
-  margin: 10px;
   background-color: white;
   padding: 20px;
   text-align: center;
-  margin-left: 50%;
-  height: 300px;
   font-size: 20px;
 }
 
@@ -252,25 +198,35 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
   width: 100%;
-  bottom: 0;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 1200px) {
+  .cmdtContainer,
+  .xoContainer,
+  .legalContainer,
+  .adjContainer {
+    background-size: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    right: 40px;
+  }
+
+  .nav-logo a {
+    font-size: 30px;
+    padding-left: 80px;
   }
 
   .nav-links ul {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 30px;
   }
 
-  .nav-links ul li {
-    margin: 10px 0;
+  .nav-links ul li a {
+    font-size: 18px;
   }
 
   .moto,
@@ -278,44 +234,140 @@ footer {
     font-size: 18px;
   }
 
-  .container {
-    flex-direction: column;
-    align-items: center;
+  .moto {
+    margin-left: 140px;
   }
 
-  .card {
-    flex: 1 1 100%;
-    margin: 10px 0;
+  .moto1 {
+    margin-left: 130px;
   }
 }
 
-@media (max-width: 480px) {
-  .nav-logo a {
-    font-size: 20px;
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+    position: fixed; /* Changed to fixed */
+    right: 20px;
+    top: 20px;
+    z-index: 1001; /* Higher than nav-links */
+    background: transparent;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    color: #b59410;
+    font-size: 24px;
   }
 
-  .nav-links ul li a {
+  .nav-container {
+    background: transparent !important; /* Ensure nav stays transparent */
+    position: relative;
+  }
+
+  .nav-links {
+    position: fixed; /* Changed to fixed */
+    top: 60px; /* Position below toggle button */
+    right: 20px; /* Align with toggle button */
+    width: auto;
+    min-width: 200px;
+    background-color: transparent;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000; /* High z-index to appear above everything */
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links ul li {
+    margin: 5px 0;
+    text-align: right;
+  }
+
+  /* Ensure header video stays behind everything */
+  #header-video {
+    z-index: -1;
+  }
+
+  .moto,
+  .moto1 {
+    display: none;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .cmdtContainer,
+  .xoContainer,
+  .legalContainer,
+  .adjContainer {
+    grid-template-columns: 1fr;
+    background-size: 300px;
+    background-position: center top;
+    padding-top: 300px;
+    justify-items: center;
+  }
+
+  .cmdt,
+  .xo,
+  .legal,
+  .adj {
+    padding: 15px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-logo a {
+    font-size: 24px;
+    padding-left: 60px;
+  }
+
+  nav {
+    background-size: 80px;
   }
 
   .moto,
   .moto1 {
     font-size: 16px;
+    margin-left: 80px;
   }
 
-  .cmdtContainer {
-    padding: 20px 10px;
+  .cmdtContainer,
+  .xoContainer,
+  .legalContainer,
+  .adjContainer {
+    background-size: 200px;
+    padding-top: 200px;
   }
+}
 
-  .cmdt h1 {
-    font-size: 24px;
-  }
-
-  .cmdt h2 {
+@media (max-width: 400px) {
+  .nav-logo a {
     font-size: 20px;
+    padding-left: 50px;
   }
 
-  .cmdt p {
+  nav {
+    background-size: 60px;
+  }
+
+  .moto,
+  .moto1 {
     font-size: 14px;
+    margin-left: 60px;
+  }
+
+  .nav-links ul li a {
+    font-size: 16px;
   }
 }

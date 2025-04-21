@@ -1,3 +1,9 @@
+document
+  .querySelector(".mobile-menu-toggle")
+  .addEventListener("click", function () {
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
+
 // News Slider Functionality
 let slideIndex = 0;
 let slideInterval;
