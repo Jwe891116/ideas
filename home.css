@@ -13,6 +13,24 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+/* Combined gold text glow styles */
+.nav-logo a,
+.nav-links ul li a,
+.moto1 {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
+}
+
+.nav-logo a:hover,
+.nav-links ul li a:hover {
+  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
+    0 0 80px #b59410;
+}
+
 header {
   width: 100%;
   height: 100vh;
@@ -65,12 +83,7 @@ header {
 .nav-logo a {
   font-size: clamp(24px, 4vw, 35px);
   padding-left: 100px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410;
-  transition: text-shadow 0.3s ease;
+  margin-left: 30px;
 }
 
 .nav-links {
@@ -94,38 +107,32 @@ nav {
 }
 
 .nav-links ul li a {
-  text-decoration: none;
-  color: #fff;
   font-size: clamp(16px, 2vw, 20px);
-  font-weight: bold;
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410;
-  transition: text-shadow 0.3s ease;
-}
-
-.nav-links ul li a:hover {
-  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
-    0 0 80px #b59410;
 }
 
 .moto1 {
   font-style: italic;
   font-size: clamp(16px, 2vw, 20px);
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410;
-  transition: text-shadow 0.3s ease;
-}
-
-.moto1 {
   width: 250px;
   margin-left: 152px;
   text-align: center;
 }
 
-.container {
+/* Combined card styles */
+.card,
+.vision-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
+.container,
+.vision-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -139,35 +146,11 @@ nav {
   margin-bottom: 40px;
 }
 
-.card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 20px;
-}
-
-.vision-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .vision-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 20px;
   margin-bottom: 40px;
 }
 
+/* Combined officer container styles */
 .cmdtContainer,
 .xoContainer,
 .legalContainer,
@@ -182,6 +165,7 @@ nav {
   margin-bottom: 40px;
 }
 
+/* Combined officer content styles */
 .cmdt,
 .xo,
 .legal,
@@ -228,16 +212,8 @@ footer {
     font-size: 18px;
   }
 
-  .moto,
   .moto1 {
     font-size: 18px;
-  }
-
-  .moto {
-    margin-left: 140px;
-  }
-
-  .moto1 {
     margin-left: 130px;
   }
 }
@@ -245,10 +221,10 @@ footer {
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
-    position: fixed; /* Changed to fixed */
+    position: fixed;
     right: 20px;
     top: 20px;
-    z-index: 1001; /* Higher than nav-links */
+    z-index: 1001;
     background: transparent;
     border-radius: 4px;
     padding: 8px;
@@ -258,14 +234,14 @@ footer {
   }
 
   .nav-container {
-    background: transparent !important; /* Ensure nav stays transparent */
+    background: transparent !important;
     position: relative;
   }
 
   .nav-links {
-    position: fixed; /* Changed to fixed */
-    top: 60px; /* Position below toggle button */
-    right: 20px; /* Align with toggle button */
+    position: fixed;
+    top: 60px;
+    right: 20px;
     width: auto;
     min-width: 200px;
     background-color: transparent;
@@ -273,7 +249,7 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    z-index: 1000; /* High z-index to appear above everything */
+    z-index: 1000;
   }
 
   .nav-links.active {
@@ -291,12 +267,6 @@ footer {
     text-align: right;
   }
 
-  /* Ensure header video stays behind everything */
-  #header-video {
-    z-index: -1;
-  }
-
-  .moto,
   .moto1 {
     display: none;
   }
@@ -335,7 +305,6 @@ footer {
     background-size: 80px;
   }
 
-  .moto,
   .moto1 {
     font-size: 16px;
     margin-left: 80px;
@@ -360,7 +329,6 @@ footer {
     background-size: 60px;
   }
 
-  .moto,
   .moto1 {
     font-size: 14px;
     margin-left: 60px;

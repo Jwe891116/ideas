@@ -53,11 +53,15 @@ function resetInterval() {
 // News Modal Functionality
 function showNewsModal(newsIndex) {
   const modal = document.getElementById("newsModal");
-  const newsContent = document.getElementById(
-    `news-content-${newsIndex}`
-  ).innerHTML;
+  const newsItem = document.getElementById(`news-content-${newsIndex}`);
+  const headline =
+    newsItem.parentElement.querySelector(".card-headline h3").textContent;
+  const content = newsItem.innerHTML;
 
-  document.getElementById("modalNewsContent").innerHTML = newsContent;
+  document.getElementById("modalNewsContent").innerHTML = `
+    <h3>${headline}</h3>
+    ${content}
+  `;
   modal.style.display = "block";
 
   // Pause slider when modal is open

@@ -13,6 +13,7 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+/* Header & Navigation - Matched to home.css */
 header {
   width: 100%;
   height: 100vh;
@@ -63,8 +64,13 @@ header {
 }
 
 .nav-logo a {
-  font-size: clamp(24px, 4vw, 35px);
-  padding-left: 100px;
+  margin-left: 30px;
+}
+
+/* Combined gold text glow styles from home.css */
+.nav-logo a,
+.nav-links ul li a,
+.moto1 {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -73,11 +79,15 @@ header {
   transition: text-shadow 0.3s ease;
 }
 
-.nav-links {
-  position: fixed;
-  right: 70px;
-  margin-top: 60px;
-  font-size: 20px;
+.nav-logo a:hover,
+.nav-links ul li a:hover {
+  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
+    0 0 80px #b59410;
+}
+
+.nav-logo a {
+  font-size: clamp(24px, 4vw, 35px);
+  padding-left: 100px;
 }
 
 nav {
@@ -87,6 +97,13 @@ nav {
   font-size: 36px;
 }
 
+.nav-links {
+  position: fixed;
+  right: 70px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
 .nav-links ul {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -94,35 +111,20 @@ nav {
 }
 
 .nav-links ul li a {
-  text-decoration: none;
-  color: #fff;
   font-size: clamp(16px, 2vw, 20px);
-  font-weight: bold;
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410;
-  transition: text-shadow 0.3s ease;
-}
-
-.nav-links ul li a:hover {
-  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
-    0 0 80px #b59410;
 }
 
 .moto1 {
   font-style: italic;
   font-size: clamp(16px, 2vw, 20px);
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410;
-  transition: text-shadow 0.3s ease;
   width: 250px;
   margin-left: 152px;
   text-align: center;
 }
 
-.container {
+/* News Content Styles */
+.container,
+.grid-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -139,16 +141,103 @@ nav {
 .card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  text-align: center;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
+  text-align: center;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-grid {
+  padding: 40px 0;
+}
+
+.grid-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.grid-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.grid-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.grid-card:hover .card-img img {
+  transform: scale(1.05);
+}
+
+.card-headline {
+  padding: 15px;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-headline h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card-full-content {
+  display: none;
+  position: absolute;
 }
 
 /* News Slider */
@@ -182,6 +271,7 @@ nav {
 .news-slide p {
   font-size: 18px;
   color: #555;
+  line-height: 1.6;
 }
 
 .news-btn {
@@ -215,82 +305,11 @@ nav {
   right: 20px;
 }
 
-/* News Grid */
-.news-grid {
-  padding: 40px 0;
-}
-
-.grid-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.grid-container h1 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.grid-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.card-img {
-  height: 200px;
-  overflow: hidden;
-}
-
-.card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.grid-card:hover .card-img img {
-  transform: scale(1.05);
-}
-
-.card-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.card-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.card-content p {
-  color: #555;
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-/* Modal styling */
+/* Modal */
 .news-modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1100;
   left: 0;
   top: 0;
   width: 100%;
@@ -339,15 +358,22 @@ nav {
   color: #555;
 }
 
+/* Footer */
 footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 15px 0;
+  padding: 10px 0;
   width: 100%;
 }
 
-/* Responsive Styles */
+/* Responsive Styles - Matched to home.css */
+@media (max-width: 1200px) {
+  .nav-links ul {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 992px) {
   .nav-links {
     right: 40px;
@@ -448,6 +474,11 @@ footer {
     background-size: 80px;
   }
 
+  .moto1 {
+    font-size: 16px;
+    margin-left: 80px;
+  }
+
   .news-slide h3 {
     font-size: 20px;
   }
@@ -465,6 +496,11 @@ footer {
 
   nav {
     background-size: 60px;
+  }
+
+  .moto1 {
+    font-size: 14px;
+    margin-left: 60px;
   }
 
   .nav-links ul li a {

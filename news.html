@@ -43,33 +43,12 @@
       <div class="row">
         <div class="card">
           <h2>COURAGE</h2>
-          <br />
-          <p>
-            Our integrity is built on our character to do what is right in the
-            face of compromise. To confront fear, pain, risk or uncertainty and
-            to face danger, hardship or death. We are loyal to our leader and
-            will defend our cause.
-          </p>
         </div>
         <div class="card">
           <h2>COMMITMENT</h2>
-          <br />
-          <p>
-            We are a professional military who seek responsibility, accept
-            responsibility, and are committed to the successful achievement of
-            our organizational goals. We serve that others may live. We serve
-            with pride.
-          </p>
         </div>
         <div class="card">
           <h2>RESPECT</h2>
-          <br />
-          <p>
-            Respect but not fear for adversity. Respect for self and others,
-            treating all with fairness, dignity, and compassion We foster
-            individual opportunity and growth. We encourage creativity and
-            innovation through education. We work as a team.
-          </p>
         </div>
       </div>
     </div>
@@ -79,30 +58,15 @@
       <div class="news-slide-container">
         <div class="news-slide">
           <h3>Wonder Woman Competition Champions!</h3>
-          <p>
-            Coast Guard Team Alpha Crowned Wonder Woman 2025 Champions in
-            intense competition.
-          </p>
         </div>
         <div class="news-slide">
           <h3>Belize Coast Guard Salary Increase!</h3>
-          <p>
-            Belize Coast Guard Working to Increase Salaries for Hundreds of
-            Personnel Under "People's Operation."
-          </p>
         </div>
         <div class="news-slide">
           <h3>Stolen Vessel Ring!</h3>
-          <p>
-            Stolen Vessels Ring Linked to Honduras: Coast Guard Tackles Ongoing
-            Issue.
-          </p>
         </div>
         <div class="news-slide">
           <h3>Belize Coast Guard Stays Alert!</h3>
-          <p>
-            Belize Coast Guard Remains on Alert for Holiday Maritime Security.
-          </p>
         </div>
       </div>
       <button class="news-btn right" onclick="nextSlide()">&#10095;</button>
@@ -114,108 +78,213 @@
         <br />
         <div class="grid">
           <!-- News Card 1 -->
-          <div class="grid-card">
+          <div class="grid-card" onclick="showNewsModal(0)">
             <div class="card-img">
-              <img
-                src="images/news-desk.png"
-                alt="News image"
-                onclick="showNewsModal(0)"
-              />
+              <img src="images/news-desk.png" alt="News image" />
             </div>
-            <div class="card-content" id="news-content-0">
+            <div class="card-headline">
               <h3>Wonder Woman Competition</h3>
+            </div>
+            <div class="card-full-content" id="news-content-0">
               <p>
-                Coast Guard Team Alpha Crowned Wonder Woman 2025 Champions in
-                intense competition...
+                Day 2 of the Wonder Woman Competition saw the Belize Coast Guard
+                and the Belize Defence Force pull even at 380 points each
+                heading into the final day, while the Belize Police Department
+                trailed at 320 points. The day’s events featured a grueling
+                six-mile run and the CG Medley, both testing the endurance and
+                resilience of the competitors. Love News spoke with Major
+                Roberta Usher of the Belize Defence Force, who shared her
+                thoughts on the day’s hard-fought victory and what it meant for
+                her team.
+                <br /><br />
+                Major Robertha Usher, Belize Defense Force: “ Every day it gets
+                harder and harder because the body is worn by now but it was
+                alright. You train for it. This morning we were a little
+                disappointed because losing a run by seconds is demoralizing. We
+                just kind of pushed through this afternoon. It was a close call.
+                I don’t even think the official time is out yet. But I think we
+                made it. From the get-go I told them, I said after every event
+                we just erase it and start new. It’s a new ball game and just
+                everybody has to remember everybody is tired. We’re all giving
+                our effort, so even if you feel like you could do a little bit
+                more, you push yourself. It doesn’t matter what somebody else is
+                doing, because at the end of the day, it’s one team.” The
+                competition has seen the Belize Police Department face
+                challenges, but this has not dampened the morale of its
+                participants. Assistant Commissioner of Police, Jane Usher,
+                emphasized that, regardless of the outcome, they take pride in
+                knowing they have given their absolute best.
+                <br /><br />
+                Jane Usher, Assistant Superintendent of Police: “My team has
+                been sticking together and I’m really proud of the girls for
+                that. You know, we know, like I said, we know our strengths, we
+                know our weaknesses, we know what is the best we can do and at
+                the end of the day, all we can do is give it our all. And I
+                think we did that, especially on this last run, even on the six
+                mile run this morning. This morning we had a six mile run. In
+                training, our best time as a team was one hour. We did a little
+                bit more than that, but that’s after two events yesterday. So
+                the girls… pushed and that’s all I ask of them. This afternoon I
+                think we really did well. I wasn’t supposed to even compete so
+                just jumping in to assist them so that we could have a stronger
+                team tomorrow as well we’re just trying to strategize as best we
+                can and learning as we go and I think the girls are really doing
+                their best so that’s good for us. We’re a bit behind in points
+                and you know but we’re going to give it our all and even if we
+                win one event or you know one evolution as they call it we get
+                excited for that because we know at the end of the day, even if
+                we get third we put in the best that we could. And so it doesn’t
+                matter when we line up, we go in believing that we can do this.
+                We are females just like they are. We are law enforcement just
+                like they are. We put on our socks one foot at a time, just like
+                they do. And so we go believing that we can do it and then may
+                the best team win.”
+                <br /><br />
+                The final events will be the March and Shoot and the CG
+                Crucible.
               </p>
             </div>
           </div>
 
           <!-- News Card 2 -->
-          <div class="grid-card">
+          <div class="grid-card" onclick="showNewsModal(1)">
             <div class="card-img">
-              <img
-                src="images/news-desk.png"
-                alt="News image"
-                onclick="showNewsModal(1)"
-              />
+              <img src="images/news-desk.png" alt="News image" />
             </div>
-            <div class="card-content" id="news-content-1">
+            <div class="card-headline">
               <h3>Coast Guard Rescues</h3>
+            </div>
+            <div class="card-full-content" id="news-content-1">
               <p>
-                Coast Guard rescues man drifting on makeshift raft south of
-                Belize City...
+                Yesterday, a man was rescued by the Belize Coast Guard after he
+                was lost at sea for several hours. Around 5:00 p.m., the Belize
+                Coast Guard received information of a man drifting on a
+                makeshift raft approximately 17 miles south of Belize City. The
+                BCG dispatched a crew and found 57-year-old Carlos Pinto sitting
+                on a bucket while drifting on the raft made of wood and metal.
+                Pinto was reportedly confused and could not provide the seamen
+                with his name or address, leading to the BCG pleading for the
+                public’s assistance on Facebook. The post was seen by his
+                family, and he was identified. Pinto reportedly grew weary of
+                working as a security guard on an island outside Belize City and
+                decided to set off. He was found with his personal belongings,
+                food, and a wooden paddle. Commandant of the Belize Coast Guard,
+                Rear Admiral Elton Bennett, spoke about the operation.
               </p>
             </div>
           </div>
 
           <!-- News Card 3 -->
-          <div class="grid-card">
+          <div class="grid-card" onclick="showNewsModal(2)">
             <div class="card-img">
-              <img
-                src="images/news-desk.png"
-                alt="News image"
-                onclick="showNewsModal(2)"
-              />
+              <img src="images/news-desk.png" alt="News image" />
             </div>
-            <div class="card-content" id="news-content-2">
+            <div class="card-headline">
               <h3>Salary Increase</h3>
+            </div>
+            <div class="card-full-content" id="news-content-2">
               <p>
-                Belize Coast Guard working to increase salaries for personnel...
+                The Belize Coast Guard is working to raise the salaries of its
+                members who are being underpaid. Coast Guard Commandant Rear
+                Admiral Elton Bennett explained that the BCG launched the
+                People’s Operation, last year, an initiative aimed at reviewing
+                salaries and getting personnel properly compensated. Bennett
+                says that the need for the operation was brought up at the last
+                BCG senior officers conference. Since the operation has rolled
+                out, around 200 personnel have gotten a salary increase with
+                more on the way.
               </p>
             </div>
           </div>
 
           <!-- News Card 4 -->
-          <div class="grid-card">
+          <div class="grid-card" onclick="showNewsModal(3)">
             <div class="card-img">
-              <img
-                src="images/news-desk.png"
-                alt="News image"
-                onclick="showNewsModal(3)"
-              />
+              <img src="images/news-desk.png" alt="News image" />
             </div>
-            <div class="card-content" id="news-content-3">
+            <div class="card-headline">
               <h3>Stolen Vessel Ring</h3>
+            </div>
+            <div class="card-full-content" id="news-content-3">
               <p>
-                Stolen vessels ring linked to Honduras: Coast Guard tackles
-                ongoing issue...
+                The issue of stolen vessels is also one that the Belize Coast
+                Guard has had to tackle in the past year. Commander Elton
+                Bennett told Love News that there is a ring that extends as far
+                as Honduras when it comes to stolen vessels in Belize’s waters.
+                <br /><br />
+                RADM Elton Bennett, Belize Coast Guard Commandant: “And as we
+                relate to maritime crime, there’s a lot of vessel theft as of
+                recent targeting areas of San Pedro, Caye Caulker and even down
+                in Placencia that we are very concerned about. So again, this is
+                a new phenomena that is plaguing our maritime space. We believe
+                that there is a ring between Belize and Honduras where these
+                vessels would be stripped for engine and other accessories.”
               </p>
             </div>
           </div>
 
           <!-- News Card 5 -->
-          <div class="grid-card">
+          <div class="grid-card" onclick="showNewsModal(4)">
             <div class="card-img">
-              <img
-                src="images/news-desk.png"
-                alt="News image"
-                onclick="showNewsModal(4)"
-              />
+              <img src="images/news-desk.png" alt="News image" />
             </div>
-            <div class="card-content" id="news-content-4">
+            <div class="card-headline">
               <h3>Holiday Alert</h3>
+            </div>
+            <div class="card-full-content" id="news-content-4">
               <p>
-                Belize Coast Guard remains on alert for holiday maritime
-                security...
+                Law enforcement officials will be on high alert over the
+                Christmas season on both land and sea. As it relates to maritime
+                security, Rear Admiral Elton Bennett of the Belize Coast Guard
+                told Love News that his teams will be deployed at all bases. He
+                noted that the holiday strategy also entails having support
+                teams on call to assist should any situation develop. As
+                families make final preparations for the Christmas, Commander
+                Bennett, expressed gratitude to those who support the seamen and
+                officers on call for the holidays.
+                <br /><br />
+                RADM Elton Bennett, Belize Coast Guard Commandant: “The Coast
+                Guard remains operationally committed throughout the holiday
+                season. We have our Forward Operating Basses that are up and
+                operational. We have aggressive patrolling in areas where we
+                believe there may be vulnerable mariners and fisherfolk so we
+                have a specially designed operation to ensure that both maritime
+                security but also maritime safety of mariners transiting
+                Belizean waters is kept on our Coast Guard radar and that we’re
+                able to respond to any eventualities that may occur out at sea
+                during this period. So as far north as Consejo our border with
+                Mexico and as far south as Barranco and Hunting Caye the Belize
+                Coast Guard will continue to patrol those areas maintaining
+                watch across our sea spaces, throughout the Christmas season. We
+                do not collapse operations at any point. Our operations remain
+                forward deployed. The state of readiness and the ability to
+                respond to any maritime eventualities is still out there.
+                There’s no reconfiguring of operations to scale it down. As a
+                matter of fact over this Christmas season, over the holidays we
+                remain an extra level of vigilance because people become
+                vulnerable during this time of year as well and that translates
+                to mariners out at sea as well. So the Coast Guard maintains
+                watch.”
               </p>
             </div>
           </div>
 
           <!-- News Card 6 -->
-          <div class="grid-card">
+          <div class="grid-card" onclick="showNewsModal(5)">
             <div class="card-img">
-              <img
-                src="images/news-desk.png"
-                alt="News image"
-                onclick="showNewsModal(5)"
-              />
+              <img src="images/news-desk.png" alt="News image" />
             </div>
-            <div class="card-content" id="news-content-5">
+            <div class="card-headline">
               <h3>Environmental Protection</h3>
+            </div>
+            <div class="card-full-content" id="news-content-5">
               <p>
-                Coast Guard launches marine conservation initiative to protect
-                ecosystems...
+                The Belize Coast Guard has launched a new environmental
+                protection initiative focusing on marine conservation. This
+                program includes regular patrols of protected areas, monitoring
+                of fishing activities, and collaboration with environmental
+                organizations to preserve Belize's marine ecosystems for future
+                generations.
               </p>
             </div>
           </div>
