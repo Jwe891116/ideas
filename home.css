@@ -59,7 +59,6 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 20px;
   gap: 20px;
 }
 
@@ -120,7 +119,8 @@ nav {
 
 /* Combined card styles */
 .card,
-.vision-card {
+.vision-card,
+.intro-card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   text-align: center;
@@ -129,14 +129,15 @@ nav {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   padding: 20px;
+  font-size: 17px;
 }
 
 .container,
-.vision-container {
+.vision-container,
+.intro-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .row {
@@ -146,15 +147,17 @@ nav {
   margin-bottom: 40px;
 }
 
-.vision-card {
+.vision-card,
+.intro-card {
   margin-bottom: 40px;
 }
 
 /* Combined officer container styles */
 .cmdtContainer,
 .xoContainer,
-.legalContainer,
-.adjContainer {
+.fleetContainer,
+.adjContainer,
+.aideContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-repeat: no-repeat;
@@ -168,8 +171,9 @@ nav {
 /* Combined officer content styles */
 .cmdt,
 .xo,
-.legal,
-.adj {
+.fleet,
+.adj,
+.aide {
   background-color: white;
   padding: 20px;
   text-align: center;
@@ -188,8 +192,9 @@ footer {
 @media (max-width: 1200px) {
   .cmdtContainer,
   .xoContainer,
-  .legalContainer,
-  .adjContainer {
+  .fleetContainer,
+  .adjContainer,
+  .aideContainer {
     background-size: 400px;
   }
 }
@@ -277,8 +282,9 @@ footer {
 
   .cmdtContainer,
   .xoContainer,
-  .legalContainer,
-  .adjContainer {
+  .fleetContainer,
+  .adjContainer,
+  .aideContainer {
     grid-template-columns: 1fr;
     background-size: 300px;
     background-position: center top;
@@ -288,8 +294,9 @@ footer {
 
   .cmdt,
   .xo,
-  .legal,
-  .adj {
+  .fleet,
+  .adj,
+  .aide {
     padding: 15px;
     font-size: 16px;
   }
@@ -312,8 +319,9 @@ footer {
 
   .cmdtContainer,
   .xoContainer,
-  .legalContainer,
-  .adjContainer {
+  .fleetContainer,
+  .adjContainer,
+  .aideContainer {
     background-size: 200px;
     padding-top: 200px;
   }

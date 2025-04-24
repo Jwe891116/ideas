@@ -1,3 +1,4 @@
+/* ===== GLOBAL STYLES ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,25 +14,7 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-/* Combined gold text glow styles */
-.nav-logo a,
-.nav-links ul li a,
-.moto,
-.moto1 {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
-    0 0 40px #b59410;
-  transition: text-shadow 0.3s ease;
-}
-
-.nav-logo a:hover,
-.nav-links ul li a:hover {
-  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
-    0 0 80px #b59410;
-}
-
+/* ===== UPDATED HEADER & NAVIGATION ===== */
 header {
   width: 100%;
   height: 100vh;
@@ -56,22 +39,18 @@ header {
   position: relative;
 }
 
+nav {
+  background: url(./logo/Belize_Coast_Guard_logo.png);
+  background-size: 120px;
+  background-repeat: no-repeat;
+  font-size: 36px;
+}
+
 .nav-container {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 20px;
   gap: 20px;
-}
-
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  justify-self: right;
 }
 
 .nav-logo {
@@ -85,6 +64,30 @@ header {
   font-size: clamp(24px, 4vw, 35px);
   padding-left: 100px;
   margin-left: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
+}
+
+.nav-logo a:hover {
+  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
+    0 0 80px #b59410;
+}
+
+.moto1 {
+  font-style: italic;
+  font-size: clamp(16px, 2vw, 20px);
+  width: 250px;
+  margin-left: 152px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
 }
 
 .nav-links {
@@ -92,13 +95,6 @@ header {
   right: 70px;
   margin-top: 60px;
   font-size: 20px;
-}
-
-nav {
-  background: url(./logo/Belize_Coast_Guard_logo.png);
-  background-size: 120px;
-  background-repeat: no-repeat;
-  font-size: 36px;
 }
 
 .nav-links ul {
@@ -109,29 +105,30 @@ nav {
 
 .nav-links ul li a {
   font-size: clamp(16px, 2vw, 20px);
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #b59410, 0 0 10px #b59410, 0 0 20px #b59410,
+    0 0 40px #b59410;
+  transition: text-shadow 0.3s ease;
 }
 
-.moto,
-.moto1 {
-  font-style: italic;
-  font-size: clamp(16px, 2vw, 20px);
-  width: 250px;
-  margin-left: 152px;
-  text-align: center;
+.nav-links ul li a:hover {
+  text-shadow: 0 0 10px #b59410, 0 0 20px #b59410, 0 0 40px #b59410,
+    0 0 80px #b59410;
 }
 
-/* Combined card styles */
-.card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 20px;
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #b59410;
+  font-size: 24px;
+  cursor: pointer;
+  justify-self: right;
 }
 
+/* ===== MAIN CONTENT STYLES ===== */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -146,6 +143,17 @@ nav {
   margin-bottom: 40px;
 }
 
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
 .history {
   width: 100%;
   margin: 0 auto;
@@ -158,11 +166,15 @@ nav {
 .history h2 {
   text-align: center;
   margin-bottom: 15px;
+  color: #0056b3;
 }
 
 .history p {
   line-height: 1.6;
   margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tab-container {
@@ -185,7 +197,7 @@ nav {
   border: 1px solid #ddd;
   border-bottom: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
   border-radius: 5px 5px 0 0;
 }
 
@@ -213,6 +225,11 @@ nav {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tab-image:hover {
+  transform: scale(1.02);
 }
 
 .special-forces-container {
@@ -228,17 +245,29 @@ nav {
   border-radius: 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #ddd;
+  transition: transform 0.3s ease;
 }
 
+.special-forces-image:hover {
+  transform: scale(1.02);
+}
+
+/* ===== FOOTER ===== */
 footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
 }
 
-/* Responsive Styles */
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1200px) {
+  .nav-links {
+    right: 50px;
+  }
+}
+
 @media (max-width: 992px) {
   .nav-links {
     right: 40px;
@@ -257,7 +286,6 @@ footer {
     font-size: 18px;
   }
 
-  .moto,
   .moto1 {
     font-size: 18px;
     margin-left: 130px;
@@ -271,12 +299,6 @@ footer {
     right: 20px;
     top: 20px;
     z-index: 1001;
-    background: transparent;
-    border-radius: 4px;
-    padding: 8px;
-    border: none;
-    color: #b59410;
-    font-size: 24px;
   }
 
   .nav-container {
@@ -313,7 +335,6 @@ footer {
     text-align: right;
   }
 
-  .moto,
   .moto1 {
     display: none;
   }
@@ -333,7 +354,6 @@ footer {
     background-size: 80px;
   }
 
-  .moto,
   .moto1 {
     font-size: 16px;
     margin-left: 80px;
@@ -350,7 +370,6 @@ footer {
     background-size: 60px;
   }
 
-  .moto,
   .moto1 {
     font-size: 14px;
     margin-left: 60px;
